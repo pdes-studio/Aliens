@@ -1,0 +1,320 @@
+.hero{
+	background: url(../img/background-hero-320.svg) no-repeat;
+	background-position: center -130px;
+	background-size: auto 350px;
+	width: 100%;
+	z-index: 1;
+
+    .container{
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: center;    
+        justify-content: center;
+
+	img{ 
+		padding: 80px 0 24px 0;
+        margin: 0 auto;
+    }
+
+    > div{
+        h1{
+            max-width: 220px;
+            margin: 0px auto 16px auto;
+            text-align: center;
+        }
+
+        p{
+            max-width: 340px;
+        }
+    }
+
+    .scroll-interaction{
+        height: 36px;
+        display: flex;
+        align-items: center;
+
+        .mouse-scroll{
+            height: 36px;
+            width: 26px;
+            border-radius: 30px;
+            border: 4px solid $verde;
+            position: relative;
+            margin: 36px auto 0 auto;
+
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 4px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 8px;
+                width: 6px;
+                border-radius: 10px;
+                background: $verde;
+                animation: mouse 1s infinite;
+            }
+        }
+
+        p{ display: none;}
+    }
+
+}
+
+}
+
+.features{
+    margin-top: 90px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    
+    .item{
+        margin-top: 32px;
+
+        img{
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        h3{ margin: 16px auto;}
+
+        p{ max-width: 200px; }
+    }
+
+}
+
+.oportunidade{
+    margin-top: 90px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    img{margin-bottom: 32px;}
+    h2{margin-bottom: 24px;}
+}
+
+.viagens{
+    margin-top: 90px;
+    padding: 20px 20px 72px 20px;
+    background: $azul;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 30px;
+
+    img{ margin-top: -100px; margin-bottom: 32px; transform: rotate(-90deg);}
+
+    h2{ color: $verde;  margin: 16px auto;}
+    p{ color: $branco;}
+}
+
+
+@media only screen and (min-width: 768px){
+.hero{
+    height: 600px;
+    width: 100%;
+    background: url(../img/background-hero.svg) no-repeat;
+    background-position: right 0;
+    background-size: 50% auto;
+    
+    .container{
+        padding-top: 80px;
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        img{ 
+            padding-top: 60px;
+            margin: 0;
+            width: calc(50% - 12px);
+            max-width: 800px;
+            order: 2;
+        }
+    
+        > div{
+            order: 1;
+            width: calc(50% - 12px);
+            h1{
+                text-align: left;
+                max-width: 220px;
+                margin: 0 0 16px 0;
+            }
+
+            p{font-size: 18px; text-align: left;}
+
+            .cta{ margin-left: 0; margin-right: 0;}
+        }
+
+        .scroll-interaction{
+            order: 3;
+            margin-top: 60px;
+    
+            .mouse-scroll{
+                margin: 0;
+                flex-grow: 100%;
+            }
+
+            p{
+                display: flex;
+                align-items: center;
+                &:before{
+                    content: '';
+                    height: 2px;
+                    width: 30px;
+                    background: $azul;
+                    display: block;
+                    margin: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+
+.features{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    
+    .item{
+        margin-top: 32px;
+        
+        > *{ text-align: center;}
+
+        img{
+            max-width: 120px;
+        }
+
+        h3{ margin: 36px auto 24px auto;}
+
+        p{ max-width: 200px; }
+    }
+}
+
+
+.oportunidade{
+    margin-top: 140px;
+    img{margin-bottom: 56px;}
+    h2{margin-bottom: 36px;}
+}
+
+.viagens{
+    margin-top: 160px;
+    padding: 20px 20px 72px 20px;
+    background: $azul;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 30px;
+
+    img{ margin-top: -160px; margin-bottom: 32px; transform: rotate(-90deg);}
+
+    h2{ color: $verde;  margin: 16px auto;}
+    p{ color: $branco;}
+}
+
+}
+
+
+@media only screen and (min-width: 960px){
+    
+    .hero{
+        height: 780px;
+        background: url(../img/background-hero-2.svg) no-repeat;
+        background-position: right 0;
+        background-size: 50% auto;
+    
+        .container{
+            padding-top: 120px;
+        }
+    }
+
+    .oportunidade{
+        margin-top: 140px;
+        flex-flow: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        img{ order: 2; margin: 0;  max-width: calc(50% - 12px);}
+    
+        > div{
+            order: 1;
+            max-width: 480px;
+            h2, p{ text-align: left;}
+        }
+    }
+    
+    .viagens{
+        margin-top: 280px;
+        padding: 20px 100px 0px 20px;
+        background: $azul;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+    
+        img{ 
+            margin-top: -160px; 
+            margin-bottom: 0; 
+            transform: rotate(0deg);
+            max-width: calc(50% - 12px + 104px);
+        }
+
+        > div{
+            max-width: calc(50% - 152px);
+            h2{margin-bottom: 36px;}
+            h2, p{ text-align: left;}
+        }
+    
+    }
+
+
+    .oportunidade{
+        margin-top: 140px;
+        img{margin-bottom: 56px; width: 100%;}
+        h2{margin-bottom: 36px;}
+    }
+    
+
+
+}
+
+
+
+@media only screen and (min-width: 1200px){
+    .hero{
+        .container{
+            > div{
+                p { font-size: 24px; max-width: 400px;}
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1440px){
+
+    .hero{
+        height: 900px;
+        background: url(../img/background-hero-2.svg) no-repeat;
+        background-position: right 0;
+        background-size: 50% auto;
+    
+        .container{
+            padding-top: 120px;
+        }
+    }
+
+    
+
+}
+

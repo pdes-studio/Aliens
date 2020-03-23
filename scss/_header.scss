@@ -1,0 +1,33 @@
+header{
+	position: absolute;
+	z-index: 2;
+	padding: 20px;
+
+	.logo img{
+		height: 48px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	header{
+		padding: 32px;
+	}
+	
+
+}
+
+
+@media only screen and (min-width: 960px) {
+	
+
+}
+
+
+@media only screen and (min-width: 1140px) {
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+}
