@@ -146,8 +146,8 @@ p{
 
 	.cta{
 		font-size: 18px;
-		max-width: 260px;
-		margin: 48px 0 0 0;
+		max-width: 200px;
+		margin: 48px auto 0 auto;
 		padding: 20px 0;
 	}
 
@@ -158,15 +158,29 @@ p{
 
 	.container{ padding: 0 140px;}
 
-	p{ font-size: 18px;}
+
+	.cta{
+		margin: 48px 0 0 0;
+	}
 }
 
 
 @media only screen and (min-width: 1200px) {
 
+	.container{
+		padding: 0 200px;
+	}
+
 	h1{font-size: 60px;}
 
 	h2{font-size: 48px; }
+
+	p{ font-size: 18px;}
+
+	.cta{
+		margin: 64px 0 0 0;
+		max-width: 240px;
+	}
 
 }
 
@@ -174,7 +188,6 @@ p{
 
 	h1{font-size: 72px;}
 
-	h2{font-size: 60px; }
 
 	.cta{
 		font-size: 24px;

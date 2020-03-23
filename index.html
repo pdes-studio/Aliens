@@ -21,8 +21,7 @@
             <div>
                 <h1>Busque conhecimento</h1>
                 <p>Seres humaninhos, não percam tempo e venha nos visitar!</p>
-                <input class="cta" type="button" value="Ir para Marte" onclick="play()">
-                <audio id="audio" src="audio.ogg"></audio>
+                <a href="" class="cta">Ir para Marte</a>
             </div>
             <div class="scroll-interaction">
                 <div class="mouse-scroll"></div>
@@ -35,18 +34,24 @@
         <section class="features container">
             <div class="item">
                 <img src="img/radical.svg" alt="">
-                <h3>Radical</h3>
-                <p>Você vai viajar numa nave espacial, entendeu? Uma nave espacial!</p>
+                <div>
+                    <h3>Radical</h3>
+                    <p>Você vai viajar numa nave espacial, entendeu? Uma nave espacial!</p>    
+                </div>
             </div>
             <div class="item">
                 <img src="img/guiado.svg" alt="">
-                <h3>Radical</h3>
-                <p>Nosso piloto <strong>Max</strong> irá te acompanhar e te orientar (ele é legal).</p>
+                <div>
+                    <h3>Guiado</h3>
+                    <p>Nosso piloto <strong>Max</strong> irá te acompanhar e te orientar (ele é legal).</p>
+                </div>
             </div>
             <div class="item">
                 <img src="img/paz-e-amor.svg" alt="">
-                <h3>Radical</h3>
-                <p>Sempre fazendo o sinal de paz e amor. Sinta essa vibe, meu camarada.</p>
+                <div>
+                    <h3>Paz e Amor</h3>
+                    <p>Sempre fazendo o sinal de paz e amor. Sinta essa vibe, meu camarada.</p>
+                </div>
             </div>
         </section>
 
@@ -60,7 +65,9 @@
         </section>
 
         <section class="viagens">
-            <img src="img/p-viagens.svg" alt="">
+
+            <img src="img/viagens/viagens-320-768.svg" class="" alt="" srcset="img/viagens/viagens-320-768.svg 320w, img/viagens/viagens-320-768.svg 768w, img/viagens/viagens-960.svg 1024w" sizes="(max-width: 1920px) 100vw, 1920px">
+
             <div>
                 <h2>Zaéter é logo ali, tá sabendo não?</h2>
                 <p>Talvez você esteja com dúvidas sobre quanto isso vai te custar, né? Humaninho, o patrão ficou maluco, só vai te custar o cérebro e a vontade de buscar o mais essencial - o conhecimento, isso mesmo.</p>
@@ -68,14 +75,6 @@
             </div>
         </section>
     </main>
-    
-    <script>
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.volume = .2;
-        audio.play();
-      }
-    </script>
 
 </body>
 </html>

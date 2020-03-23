@@ -142,8 +142,8 @@ p {
   }
   .cta {
     font-size: 18px;
-    max-width: 260px;
-    margin: 48px 0 0 0;
+    max-width: 200px;
+    margin: 48px auto 0 auto;
     padding: 20px 0;
   }
 }
@@ -152,26 +152,33 @@ p {
   .container {
     padding: 0 140px;
   }
-  p {
-    font-size: 18px;
+  .cta {
+    margin: 48px 0 0 0;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .container {
+    padding: 0 200px;
+  }
   h1 {
     font-size: 60px;
   }
   h2 {
     font-size: 48px;
   }
+  p {
+    font-size: 18px;
+  }
+  .cta {
+    margin: 64px 0 0 0;
+    max-width: 240px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
   h1 {
     font-size: 72px;
-  }
-  h2 {
-    font-size: 60px;
   }
   .cta {
     font-size: 24px;
@@ -216,13 +223,19 @@ header .logo img {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  header {
+    padding: 32px 80px;
+  }
+}
+
 footer {
   display: block;
   height: 400px;
 }
 
 .hero {
-  background: url(../img/background-hero-320.svg) no-repeat;
+  background: url(../img/bg/background-hero-320.svg) no-repeat;
   background-position: center -130px;
   background-size: auto 350px;
   width: 100%;
@@ -356,8 +369,9 @@ footer {
 }
 
 .viagens {
+  position: relative;
   margin-top: 90px;
-  padding: 20px 20px 72px 20px;
+  padding: 0px 20px 72px 20px;
   background: #242D70;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,18 +384,23 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .viagens img {
-  margin-top: -100px;
-  margin-bottom: 32px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  position: absolute;
+  max-width: 100vw;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+  height: 240px;
 }
 
 .viagens h2 {
   color: #2CF3A2;
-  margin: 16px auto;
+  margin: 240px auto 16px auto;
 }
 
 .viagens p {
@@ -390,14 +409,14 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 600px;
+    height: 736px;
     width: 100%;
-    background: url(../img/background-hero.svg) no-repeat;
-    background-position: right 0;
-    background-size: 50% auto;
+    background: url(../img/bg/background-hero-768-960.svg) no-repeat;
+    background-position: 120% 0;
+    background-size: 440px auto;
   }
   .hero .container {
-    padding-top: 80px;
+    padding-top: 120px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -500,7 +519,7 @@ footer {
     max-width: 200px;
   }
   .oportunidade {
-    margin-top: 140px;
+    margin-top: 160px;
   }
   .oportunidade img {
     margin-bottom: 56px;
@@ -508,49 +527,29 @@ footer {
   .oportunidade h2 {
     margin-bottom: 36px;
   }
-  .viagens {
-    margin-top: 160px;
-    padding: 20px 20px 72px 20px;
-    background: #242D70;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 30px;
-  }
   .viagens img {
-    margin-top: -160px;
-    margin-bottom: 32px;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    height: 360px;
   }
   .viagens h2 {
-    color: #2CF3A2;
-    margin: 16px auto;
-  }
-  .viagens p {
-    color: #ffffff;
+    margin-top: 320px;
   }
 }
 
 @media only screen and (min-width: 960px) {
   .hero {
-    height: 780px;
-    background: url(../img/background-hero-2.svg) no-repeat;
-    background-position: right 0;
-    background-size: 50% auto;
+    height: 736px;
+    width: 100%;
+    background: url(../img/bg/background-hero-768-960.svg) no-repeat;
+    background-position: 100% 0;
+    background-size: auto 736px;
   }
   .hero .container {
     padding-top: 120px;
   }
+  .features .item p {
+    max-width: 220px;
+  }
   .oportunidade {
-    margin-top: 140px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -558,69 +557,58 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .oportunidade img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 0;
-    max-width: calc(50% - 12px);
+    max-width: calc(50% - 32px);
   }
   .oportunidade > div {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    max-width: 480px;
+    max-width: calc(50% - 32px);
   }
   .oportunidade > div h2, .oportunidade > div p {
     text-align: left;
   }
   .viagens {
-    margin-top: 280px;
-    padding: 20px 100px 0px 20px;
+    max-width: calc(100% - 64px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 160px auto 0 auto;
+    padding: 0px 0px;
     background: #242D70;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    border-radius: 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .viagens img {
-    margin-top: -160px;
-    margin-bottom: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    max-width: calc(50% - 12px + 104px);
+    position: relative;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: calc(50% - 12px);
+    -webkit-transform: rotate3d(-180deg);
+            transform: rotate3d(-180deg);
+    margin-right: 48px;
   }
   .viagens > div {
-    max-width: calc(50% - 152px);
+    padding: 72px 0;
+    max-width: calc(50% - 140px);
   }
   .viagens > div h2 {
     margin-bottom: 36px;
+    margin-top: 0;
   }
   .viagens > div h2, .viagens > div p {
     text-align: left;
-  }
-  .oportunidade {
-    margin-top: 140px;
-  }
-  .oportunidade img {
-    margin-bottom: 56px;
-    width: 100%;
-  }
-  .oportunidade h2 {
-    margin-bottom: 36px;
   }
 }
 
@@ -634,12 +622,70 @@ footer {
 @media only screen and (min-width: 1440px) {
   .hero {
     height: 900px;
-    background: url(../img/background-hero-2.svg) no-repeat;
+    background: url(../img/bg/background-hero-1440.svg) no-repeat;
     background-position: right 0;
     background-size: 50% auto;
   }
   .hero .container {
     padding-top: 120px;
+  }
+  .viagens {
+    margin-bottom: 140px;
+    height: 550px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: calc(100% - 160px);
+  }
+  .viagens img {
+    width: 50%;
+    -o-object-position: center;
+       object-position: center;
+    margin-right: 72px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .hero {
+    height: 1080px;
+    background: url(../img/bg/background-hero-1600.svg) no-repeat;
+    background-position: right 0;
+    background-size: auto 100%;
+  }
+  .hero .container {
+    padding-top: 120px;
+  }
+  .features .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+  }
+  .features .item img {
+    max-width: 180px;
+    margin: 0 36px 0 0;
+  }
+  .features .item > div h3, .features .item > div p {
+    text-align: left;
+  }
+  .features .item > div h3 {
+    margin-top: 0;
+  }
+  .features .item > div p {
+    max-width: 240px;
+  }
+  .viagens {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .viagens > div {
+    padding: 72px 0;
+    max-width: calc(50%);
+    padding-right: 120px;
   }
 }
 /*# sourceMappingURL=style.css.map */

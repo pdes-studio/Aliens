@@ -1,5 +1,5 @@
 .hero{
-	background: url(../img/background-hero-320.svg) no-repeat;
+	background: url(../img/bg/background-hero-320.svg) no-repeat;
 	background-position: center -130px;
 	background-size: auto 350px;
 	width: 100%;
@@ -97,31 +97,40 @@
 }
 
 .viagens{
+    position: relative;
     margin-top: 90px;
-    padding: 20px 20px 72px 20px;
+    padding: 0px 20px 72px 20px;
     background: $azul;
     display: flex;
     flex-flow: column;
     align-items: center;
     border-radius: 30px;
+    overflow: hidden;
 
-    img{ margin-top: -100px; margin-bottom: 32px; transform: rotate(-90deg);}
+    img{ 
+        position: absolute;
+        max-width: 100vw;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+        height: 240px;
+    }
 
-    h2{ color: $verde;  margin: 16px auto;}
+    h2{ color: $verde;  margin: 240px auto 16px auto;}
     p{ color: $branco;}
 }
 
 
 @media only screen and (min-width: 768px){
 .hero{
-    height: 600px;
+    height: 736px;
     width: 100%;
-    background: url(../img/background-hero.svg) no-repeat;
-    background-position: right 0;
-    background-size: 50% auto;
+    background: url(../img/bg/background-hero-768-960.svg) no-repeat;
+    background-position: 120% 0;
+    background-size: 440px auto;
     
     .container{
-        padding-top: 80px;
+        padding-top: 120px;
         position: relative;
         display: flex;
         flex-flow: row;
@@ -200,87 +209,81 @@
 
 
 .oportunidade{
-    margin-top: 140px;
+    margin-top: 160px;
     img{margin-bottom: 56px;}
     h2{margin-bottom: 36px;}
 }
 
 .viagens{
-    margin-top: 160px;
-    padding: 20px 20px 72px 20px;
-    background: $azul;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    border-radius: 30px;
-
-    img{ margin-top: -160px; margin-bottom: 32px; transform: rotate(-90deg);}
-
-    h2{ color: $verde;  margin: 16px auto;}
-    p{ color: $branco;}
+    img{ height: 360px;}
+    h2{ margin-top: 320px;}
 }
 
+
 }
+
 
 
 @media only screen and (min-width: 960px){
     
     .hero{
-        height: 780px;
-        background: url(../img/background-hero-2.svg) no-repeat;
-        background-position: right 0;
-        background-size: 50% auto;
+        height: 736px;
+        width: 100%;
+        background: url(../img/bg/background-hero-768-960.svg) no-repeat;
+        background-position: 100% 0;
+        background-size: auto 736px;
     
         .container{
             padding-top: 120px;
         }
     }
 
+
+    .features{
+        .item{
+            p{ max-width: 220px; }
+        }
+    }
+    
+
     .oportunidade{
-        margin-top: 140px;
         flex-flow: row;
         justify-content: space-between;
-        flex-wrap: wrap;
 
-        img{ order: 2; margin: 0;  max-width: calc(50% - 12px);}
+        img{ order: 2; margin: 0;  max-width: calc(50% - 32px);}
     
         > div{
             order: 1;
-            max-width: 480px;
+            max-width: calc(50% - 32px);
             h2, p{ text-align: left;}
         }
     }
-    
+
     .viagens{
-        margin-top: 280px;
-        padding: 20px 100px 0px 20px;
+        max-width: calc(100% - 64px);
+        box-sizing: border-box;
+        margin: 160px auto 0 auto;
+        padding: 0px 0px;
         background: $azul;
-        display: flex;
         flex-flow: row;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 30px;
+        align-items: flex-start;
     
         img{ 
-            margin-top: -160px; 
-            margin-bottom: 0; 
-            transform: rotate(0deg);
-            max-width: calc(50% - 12px + 104px);
+            position: relative;
+            height: 100%;
+            object-fit: cover;
+            max-width: calc(50% - 12px);
+            transform: rotate3d(-180deg);
+            margin-right: 48px;
         }
 
         > div{
-            max-width: calc(50% - 152px);
-            h2{margin-bottom: 36px;}
+            padding: 72px 0;
+            max-width: calc(50% - 140px);
+            h2{margin-bottom: 36px; margin-top: 0;}
             h2, p{ text-align: left;}
         }
     
-    }
-
-
-    .oportunidade{
-        margin-top: 140px;
-        img{margin-bottom: 56px; width: 100%;}
-        h2{margin-bottom: 36px;}
     }
     
 
@@ -290,13 +293,8 @@
 
 
 @media only screen and (min-width: 1200px){
-    .hero{
-        .container{
-            > div{
-                p { font-size: 24px; max-width: 400px;}
-            }
-        }
-    }
+
+    .hero .container > div p { font-size: 24px; max-width: 400px;}
 
 }
 
@@ -305,16 +303,77 @@
 
     .hero{
         height: 900px;
-        background: url(../img/background-hero-2.svg) no-repeat;
+        background: url(../img/bg/background-hero-1440.svg) no-repeat;
         background-position: right 0;
         background-size: 50% auto;
+
+        .container{
+            padding-top: 120px;
+        }
+    }
+
+    .viagens{
+        margin-bottom: 140px;
+        height: 550px;
+        align-items: center;
+        max-width: calc(100% - 160px);
+
+
+        img{ width: 50%; object-position: center; margin-right: 72px;}
+    }
+
+}
+
+@media only screen and (min-width: 1600px){
+
+    .hero{
+        height: 1080px;
+        background: url(../img/bg/background-hero-1600.svg) no-repeat;
+        background-position: right 0;
+        background-size: auto 100%;
     
         .container{
             padding-top: 120px;
         }
     }
 
+    .features{
+        
+        .item{
+            display: flex;
+            align-items: center;
+            margin-top: 0px;
     
+            img{
+                max-width: 180px;
+                margin: 0 36px 0 0;
+            }
+
+            > div {
+                h3, p{text-align: left;}
+                h3{ margin-top: 0;}
+                p{max-width: 240px;}
+            }
+    
+        }
+    
+    }
+
+
+    .viagens{
+
+        justify-content: space-between;
+        > div{
+            padding: 72px 0;
+            max-width: calc(50%);
+            padding-right: 120px;
+        }
+    }
+
 
 }
+
+
+
+
 
