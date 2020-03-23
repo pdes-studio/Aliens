@@ -21,7 +21,8 @@
             <div>
                 <h1>Busque conhecimento</h1>
                 <p>Seres humaninhos, não percam tempo e venha nos visitar!</p>
-                <a href="" class="cta">Ir para Marte</a>
+                <input class="cta" type="button" value="Ir para Marte" onclick="play()">
+                <audio id="audio" src="audio.ogg"></audio>
             </div>
             <div class="scroll-interaction">
                 <div class="mouse-scroll"></div>
@@ -68,5 +69,13 @@
         </section>
     </main>
     
+    <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.volume = .2;
+        audio.play();
+      }
+    </script>
+
 </body>
 </html>
